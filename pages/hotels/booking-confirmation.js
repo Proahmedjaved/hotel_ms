@@ -1,7 +1,10 @@
+import Footer from '../components/cus_hotel/footer';
+
+
 export default function booking_confirmation(){
     return(
         <div>
-            <h1>Booking confirmation of Online Hotel</h1>
+            <Footer />
         </div>
     )
 }
