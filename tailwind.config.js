@@ -9,7 +9,10 @@ module.exports = {
     extend: {
       height: {
         '128': '40rem',
-      }
+      container: {
+        'center' : true,
+      },
+      },
     },
   },
   plugins: [],
