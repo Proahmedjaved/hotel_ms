@@ -7,23 +7,21 @@ import { useState } from 'react'
 
 import React from 'react'
 
+
 export default function booking_confirmation() {
     const [selectedDate, setSelectedDate] = useState(null)
+    const [open, setOpen] = useState(true);
     return (
         <>
             <div>
                 <HeaderItem />
             </div>
 
-            <div>
-
-            </div>
-
 
 
             <div>
 
-                <nav class="bg-white px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20  left-0 border-b border-gray-200 dark:border-gray-600">
+                <nav class="bg-[#334155] px-2 sm:px-4 py-2.5 dark:bg-gray-900 w-full z-20  left-0 border-b border-gray-200 dark:border-gray-600">
                     <div class="container flex flex-wrap justify-between items-center mx-auto">
                         <div class="flex items-center">
 
@@ -38,7 +36,7 @@ export default function booking_confirmation() {
 
 
                         <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
-                            <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border  border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+                            <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border  border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-[#334155] dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                                 <li>
                                     <select name="dropdown" className="shadow appearance-none border rounded-2xl  py-2 px-3 w-full  text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="city" >
                                         <option defaultValue="karachi" >Karachi</option>
@@ -73,23 +71,79 @@ export default function booking_confirmation() {
             </div>
 
             <div>
-                {/* <div class="flex flex-row sm:flex-flex-wrap"> */}
+
                 <div class="flex flex-col md:flex-row h-screen w-screen">
-
-                    <div class="basis-[100%] md:basis-[25%] bg-[#25aad2] h-[100vh] flex justify-center items-center">
-
+                    <div class="basis-[100%] md:basis-[25%]  h-[100vh] flex justify-center items-center">
                         <div className='bg-white h-[90%] w-60 ml-1 rounded-3xl abolute  flex flex-wrap '>
-
                         </div>
-
                     </div>
-                    <div class="basis-[100%] md:basis-[80%] bg-[#155c73] h-[100vh] flex justify-center items-center pb-20 ">
+
+
+
+
+                    <div class="basis-[100%] md:basis-[80%]  h-[100vh] flex justify-center items-center pb-20 ">
+
                         <div className='bg-white h-[100%] w-[90%]  rounded-3xl abolute  flex flex-wrap mt-20 scroll-smooth md:scroll-auto overflow-auto touch-auto'>
+                            <div>
+                                <div className="flex">
+                                    <div className={` ${open ? "w-72" : "w-0 "
+                                        } bg-black h-screen   pt-8 relative duration-300`}>
 
-                            <span></span>
+                                        <div className={`text-white origin-left font-medium text-xl duration-200 ${
+              !open && "scale-0"
+            }`}>
+
+                                            <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-3xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                                <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/docs/images/blog/image-4.jpg" alt="" />
+                                                <div class="flex flex-col justify-between p-4 leading-normal">
+                                                    <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                                                    <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+
+
+                                                    <div class="text-center">
+
+                                                        <button>Book me</button>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div className='mt-5'>
+
+                                <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-3xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                    <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/docs/images/blog/image-4.jpg" alt="" />
+                                    <div class="flex flex-col justify-between p-4 leading-normal">
+                                        <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Noteworthy technology acquisitions 2021</h5>
+                                        <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
+
+
+                                        <div class="text-center">
+
+                                            <button className={`absolute cursor-pointer -right-5 top-9 w-7 h-4 border-red  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg
+                                            border-2   ${!open && "rotate-180"}`}
+                                                onClick={() => setOpen(!open)}></button>
+
+
+
+
+
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
 
                         </div>
                     </div>
+
+
+                    {/* offcanvas */}
+
 
                 </div>
             </div>
