@@ -89,9 +89,11 @@ export default function booking_confirmation() {
                                     <div className={` ${open ? "w-72" : "w-0 "
                                         } bg-black h-screen   pt-8 relative duration-300`}>
 
+                                            {/* inside collapsible */}
+
                                         <div className={`text-white origin-left font-medium text-xl duration-200 ${
-              !open && "scale-0"
-            }`}>
+                                            !open && "scale-0"
+                                            }`}>
 
                                             <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-3xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                                 <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="/docs/images/blog/image-4.jpg" alt="" />
