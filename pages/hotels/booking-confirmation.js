@@ -16,7 +16,7 @@ import React from 'react'
 export default function booking_confirmation() {
     const [selectedDate, setSelectedDate] = useState(null)
     const [open, setOpen] = useState(true);
-   
+
     return (
         <>
             <div>
@@ -102,8 +102,8 @@ export default function booking_confirmation() {
 
                             <div className='item-center w-full pl-10 '>
 
-                            <label  class="block mb-2  text-xl font-bold pl-10 text-gray-900 dark:text-gray-300">Ratings</label>
-                                
+                                <label class="block mb-2  text-xl font-bold pl-10 text-gray-900 dark:text-gray-300">Ratings</label>
+
 
                                 <div class="flex items-center mr-4">
                                     <input checked="" id="red-checkbox" type="checkbox" value="" class="w-4 h-4 text-red-600 bg-gray-100 rounded border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
@@ -140,8 +140,6 @@ export default function booking_confirmation() {
                                         <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                     </div>
                                 </div>
-
-
                             </div>
 
                             <div className='pl-2 w-56'>
@@ -149,11 +147,6 @@ export default function booking_confirmation() {
                                 <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" />
 
                             </div>
-
-
-
-
-
                         </div>
                     </div>
 
@@ -168,7 +161,7 @@ export default function booking_confirmation() {
                                     <div className={` ${open ? "w-98" : "w-0 "
                                         } bg-white h-screen   pt-5 relative duration-300 flex scroll-smooth md:scroll-auto overflow-auto touch-auto`}>
 
-                            {/* inside collapsible */}
+                                        {/* inside collapsible */}
 
                                         <div className={`text-white origin-left mr-10 pr-5 font-medium text-xl duration-200 ${!open && "scale-0"
                                             }`}>
@@ -176,25 +169,164 @@ export default function booking_confirmation() {
                                             <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-3xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                                 <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" />
                                                 <div class="flex flex-col justify-between p-4 leading-normal">
-                                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pearl Continental Hotel Karachi</h5>
-                                                    <p class="mb-3 text-xs text-gray-700 dark:text-gray-400">Pearl-Continental Karachi is a part of the largest chain of hotels in Pakistan, 5-star accommodation with free Wi-Fi, Contemporary lifestyle destination perfectly suited for both business and leisure travelers.</p>
 
+                                                    <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pearl Continental Hotel Karachi</h5>
+                                                    <h6 class="mb-2 text-sm font-bold tracking-tight text-gray-400 dark:text-white">Karachi, Pakistan</h6>
+
+                                                    <div class="flex items-center mr-4">
+                                                        <div class="flex items-center ml-2 mb-3">
+                                                            <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                            <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                            <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                            <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                            <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                        </div>
+                                                    </div>
+                                                    <p class="mb-3 text-xs text-gray-700 dark:text-gray-400">Pearl-Continental Karachi is a part of the largest chain of hotels in Pakistan, 5-star accommodation with free Wi-Fi, Contemporary lifestyle destination perfectly suited for both business and leisure travelers.</p>
 
                                                     <div class="text-center">
 
                                                         <button className="p-1 h-auto border-red  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg"> Book me</button>
                                                     </div>
+                                                </div>
+                                            </a>
+
+                                            <div className=''><NextJsCarousel /></div>
+
+                                            <div class="divide-y divide-dashed"></div>
+
+                                            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white pl-36 ">Room Types</h5>
+
+
+
+
+
+                                            <div>
+
+                                                <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-3xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                                    <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="https://images.unsplash.com/photo-1590073242678-70ee3fc28e8e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxzZWFyY2h8OHx8aG90ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" />
+                                                    <div class="flex flex-col justify-between p-4 leading-normal">
+
+                                                        <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Delux Twin</h5>
+                                                        <p class="mb-3 text-xs text-gray-700 dark:text-gray-400">Pearl-Continental Karachi is a part of the largest chain of hotels in Pakistan, 5-star accommodation with free Wi-Fi, Contemporary lifestyle destination perfectly suited for both business and leisure travelers.</p>
+
+                                                        <div class="text-center">
+
+                                                            <button className="p-1 h-auto border-red  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg"> Book me</button>
+                                                        </div>
+
+                                                    </div>
+                                                </a>
+                                                    {/* =====================<Room type-------------> */}
+
+                                                    <div className='flex text-gray-600 text-sm font-medium mt-5 mb-15'>
+                                                        <div className='text-gray-600 flex-row pr-6 pl-7 text-sm font-medium'>
+                                                            <span className='font-bold'>Refundable: <p className='font-bold'>Free Cancellation</p></span>
+                                                            {/* <span>Refundable: <p className='font-bold'>Free Cancellation</p></span>
+                                                            <span>Refundable: <p className='font-bold'>Free Cancellation</p></span> */}
+                                                        </div>
+                                                        <div className=' flex-row pr-6 text-gray-600 text-sm font-medium'>
+                                                            <p className='font-bold text-sm'>PKR 78661</p>
+                                                            <p className='font-medium text-sm'>1 Room - 3 Night</p>
+
+                                                        </div>
+                                                        <div className='flex-row pr-6'>
+                                                            <p className='font-bold text-sm pl-3'>Select Room</p>
+                                                            <select name="dropdown" className=" font-medium shadow appearance-none border test-sm rounded-2xl  py-2 px-3 w-[8] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Room" >
+                                                                <option defaultValue="rooms" >Rooms</option>
+                                                                <option value="1">1 (PKR23456)</option>
+                                                                <option value="2">2 (PKR23456)</option>
+                                                                <option value="3">3 (PKR23456)</option>
+                                                                <option value="4">4 (PKR23456)</option>
+                                                                <option value="5">5 (PKR23456)</option>
+                                                                <option value="6">6 (PKR23456)</option>
+                                                                <option value="7">7 (PKR23456)</option>
+                                                                
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
 
                                                     
-                                                </div>
-                                                
-                                            </a>
-                                            <div className=''><NextJsCarousel /></div>
-                                        </div>
 
+
+
+                                            </div>
+
+
+
+                                            {/* <============part 2 of canvas room types================== */}
+
+
+
+                                            <div className='mt-10'>
+
+                                                <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-3xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
+                                                    <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTZ8fGhvdGVsfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="" />
+                                                    <div class="flex flex-col justify-between p-4 leading-normal">
+
+                                                        <h5 class="mb-2 text-xl font-bold tracking-tight text-gray-900 dark:text-white">Pearl King</h5>
+                                                        <p class="mb-3 text-xs text-gray-700 dark:text-gray-400">Pearl-Continental Karachi is a part of the largest chain of hotels in Pakistan, 5-star accommodation with free Wi-Fi, Contemporary lifestyle destination perfectly suited for both business and leisure travelers.</p>
+
+                                                        <div class="text-center">
+
+                                                            <button className="p-1 h-auto border-red  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg"> Book me</button>
+                                                        </div>
+
+                                                    </div>
+                                                </a>
+                                                    {/* =====================<Room type-------------> */}
+
+                                                    <div className='flex text-gray-600 text-sm font-medium mt-5 mb-15'>
+                                                        <div className='text-gray-600 flex-row pr-6 pl-7 text-sm font-medium'>
+                                                            <span className='font-bold'>Refundable: <p className='font-bold'>Free Cancellation</p></span>
+                                                            {/* <span>Refundable: <p className='font-bold'>Free Cancellation</p></span>
+                                                            <span>Refundable: <p className='font-bold'>Free Cancellation</p></span> */}
+                                                        </div>
+                                                        <div className=' flex-row pr-6 text-gray-600 text-sm font-medium'>
+                                                            <p className='font-bold text-sm'>PKR 78661</p>
+                                                            <p className='font-medium text-sm'>1 Room - 3 Night</p>
+
+                                                        </div>
+                                                        <div className='flex-row pr-6'>
+                                                            <p className='font-bold text-sm pl-3'>Select Room</p>
+                                                            <select name="dropdown" className=" font-medium shadow appearance-none border test-sm rounded-2xl  py-2 px-3 w-[8] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Room" >
+                                                                <option defaultValue="rooms" >Rooms</option>
+                                                                <option value="1">1 (PKR23456)</option>
+                                                                <option value="2">2 (PKR23456)</option>
+                                                                <option value="3">3 (PKR23456)</option>
+                                                                <option value="4">4 (PKR23456)</option>
+                                                                <option value="5">5 (PKR23456)</option>
+                                                                <option value="6">6 (PKR23456)</option>
+                                                                <option value="7">7 (PKR23456)</option>
+                                                                
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
+
+                                                    
+
+
+
+                                            </div>
+
+
+
+
+
+
+
+
+
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+
+
+
+
 
                             {/* <hotel list ----- not collapsible> */}
 
@@ -203,7 +335,25 @@ export default function booking_confirmation() {
                                 <a href="#" class="flex flex-col items-center bg-white rounded-lg border shadow-md md:flex-row md:max-w-3xl hover:bg-gray-100 dark:border-gray-700 dark:bg-gray-800 dark:hover:bg-gray-700">
                                     <img class="object-cover w-full h-96 rounded-t-lg md:h-auto md:w-48 md:rounded-none md:rounded-l-lg" src="https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8aG90ZWx8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60" alt="" />
                                     <div class="flex flex-col justify-between p-4 leading-normal">
+
                                         <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Pearl Continental Hotel Karachi</h5>
+
+                                        <div className='flex'>
+                                            <h6 class="mb-2 text-sm mt-1 font-bold tracking-tight text-gray-400 dark:text-white">Karachi, Pakistan</h6>
+
+
+
+                                            <div class="flex items-center mr-4">
+                                                <div class="flex items-center ml-2 mb-3">
+                                                    <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                    <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                    <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                    <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                    <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                                                </div>
+                                            </div>
+                                        </div>
+
                                         <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">Pearl-Continental Karachi is a part of the largest chain of hotels in Pakistan, 5-star accommodation with free Wi-Fi, Contemporary lifestyle destination perfectly suited for both business and leisure travelers.</p>
 
 
