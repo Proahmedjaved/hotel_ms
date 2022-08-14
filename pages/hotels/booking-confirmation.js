@@ -16,6 +16,36 @@ import React from 'react'
 export default function booking_confirmation() {
     const [selectedDate, setSelectedDate] = useState(null)
     const [open, setOpen] = useState(true);
+    const [values, setValues] = useState([0])
+    const [radio, setRadio] = useState("five");
+    // const [pjl, setPjl] = useState([])
+    // const [checked, setChecked] = useState(false);
+
+    // const getPjl = (e) => {
+    //     const{value, checked} = e.target
+    //     console.log(`${value} is ${checked} `)
+
+    //     if(checked){
+    //         setPjl([...pjl, value])
+    //     } 
+    //     else {
+    //         setPjl(pjl.filter((e) => e !== value))
+    //     }
+
+    // }
+
+    // function toggle(value){
+    //     return !value;
+    //   }
+    
+//     const [group, setGroup] = useState(['Books']);
+//   const toggleGroupValue = (value) => {
+//     if (group.includes(value)) group.splice(group.indexOf(value), 1);
+//     else group.push(value);
+//     setGroup([...group]);
+//   };
+// const handleClick = () => setChecked(!checked)
+
 
     return (
         <>
@@ -44,20 +74,20 @@ export default function booking_confirmation() {
                         <div class="hidden justify-between items-center w-full md:flex md:w-auto md:order-1" id="navbar-sticky">
                             <ul class="flex flex-col p-4 mt-4 bg-gray-50 rounded-lg border  border-gray-100 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-[#334155] dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
                                 <li>
-                                    <select name="dropdown" className="shadow appearance-none border rounded-2xl  py-2 px-3 w-full  text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="city" >
+                                    <select name="dropdown" className="w-full px-3 py-2 leading-tight text-gray-700 border shadow appearance-none rounded-2xl focus:outline-none focus:shadow-outline" id="city" >
                                         <option defaultValue="karachi" >Karachi</option>
                                         <option value="hyderabad">Hyderabad</option>
                                         <option value="lahore">Lahore</option>
                                     </select>
                                 </li>
                                 <li>
-                                    <DatePicker className='shadow appearance-none border rounded-2xl py-2 px-3 text-gray-700  leading-tight focus:outline-none focus:shadow-outline' selected={selectedDate} onChange={date => setSelectedDate(date)}
+                                    <DatePicker className='px-3 py-2 leading-tight text-gray-700 border shadow appearance-none rounded-2xl focus:outline-none focus:shadow-outline' selected={selectedDate} onChange={date => setSelectedDate(date)}
                                         dateFormat='dd/MM/yyyy' minDate={new Date()}
                                         placeholderText="Check-In"
                                     />
                                 </li>
                                 <li>
-                                    <DatePicker className='shadow appearance-none border rounded-2xl  py-2 px-3  text-gray-700 leading-tight focus:outline-none focus:shadow-outline' selected={selectedDate} onChange={date => setSelectedDate(date)}
+                                    <DatePicker className='px-3 py-2 leading-tight text-gray-700 border shadow appearance-none rounded-2xl focus:outline-none focus:shadow-outline' selected={selectedDate} onChange={date => setSelectedDate(date)}
                                         dateFormat='dd/MM/yyyy' minDate={new Date()}
                                         placeholderText="Check-Out"
                                     />
@@ -100,13 +130,13 @@ export default function booking_confirmation() {
                             </form>
 
 
-                            <div className='item-center w-full pl-10 '>
+                            <div className='w-full pl-10 item-center '>
 
                                 <label class="block mb-2  text-xl font-bold pl-10 text-gray-900 dark:text-gray-300">Ratings</label>
 
 
                                 <div class="flex items-center mr-4">
-                                    <input checked="" id="red-checkbox" type="checkbox" value="" class="w-4 h-4 text-red-600 bg-gray-100 rounded border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                    <input checked={radio === "five"} id="red-checkbox" type="radio" value="five" onChange={(e) => setRadio(e.target.value)}  class="w-4 h-4 text-red-600 bg-gray-100 rounded border-gray-300 focus:ring-red-500 dark:focus:ring-red-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
 
                                     <div class="flex items-center ml-2 mb-3">
                                         <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -117,7 +147,7 @@ export default function booking_confirmation() {
                                     </div>
                                 </div>
                                 <div class="flex items-center mr-4 mb-3">
-                                    <input checked="" id="green-checkbox" type="checkbox" value="" class="w-4 h-4 text-green-600 bg-gray-100 rounded border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                    <input checked={radio === "four"} id="green-checkbox" type="radio" value="four" onChange={(e) => setRadio(e.target.value)} class="w-4 h-4 text-green-600 bg-gray-100 rounded border-gray-300 focus:ring-green-500 dark:focus:ring-green-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                                     <div class="flex items-center ml-2">
                                         <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                         <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -126,7 +156,7 @@ export default function booking_confirmation() {
                                     </div>
                                 </div>
                                 <div class="flex items-center mr-4 mb-3">
-                                    <input checked="" id="purple-checkbox" type="checkbox" value="" class="w-4 h-4 text-purple-600 bg-gray-100 rounded border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                    <input checked={radio === "three"} id="purple-checkbox" type="radio" value="three" onChange={(e) => setRadio(e.target.value)} class="w-4 h-4 text-purple-600 bg-gray-100 rounded border-gray-300 focus:ring-purple-500 dark:focus:ring-purple-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                                     <div class="flex items-center ml-2">
                                         <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                         <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -134,7 +164,7 @@ export default function booking_confirmation() {
                                     </div>
                                 </div>
                                 <div class="flex items-center mr-4 mb-3">
-                                    <input checked="" id="teal-checkbox" type="checkbox" value="" class="w-4 h-4 text-teal-600 bg-gray-100 rounded border-gray-300 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
+                                    <input checked={radio === "two"} id="teal-checkbox" type="radio" value="two" onChange={(e) => setRadio(e.target.value)} class="w-4 h-4 text-teal-600 bg-gray-100 rounded border-gray-300 focus:ring-teal-500 dark:focus:ring-teal-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" />
                                     <div class="flex items-center ml-2">
                                         <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>First star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
                                         <svg aria-hidden="true" class="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><title>Second star</title><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
@@ -142,9 +172,10 @@ export default function booking_confirmation() {
                                 </div>
                             </div>
 
-                            <div className='pl-2 w-56'>
+                            <div className='w-56 pl-2'>
                                 <label for="steps-range" class="block mb-2 text-xl font-bold pl-20 text-gray-900 dark:text-gray-300">Range </label>
-                                <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" />
+                                {/* <input id="steps-range" type="range" min="0" max="5" value="2.5" step="0.5" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" /> */}
+                                <input id="steps-range" type="range" min="0" max="75" value={values} step="5" onChange={(e) => setValues(e.target.value)}  class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700" />
 
                             </div>
                         </div>
@@ -186,7 +217,7 @@ export default function booking_confirmation() {
 
                                                     <div class="text-center">
 
-                                                        <button className="p-1 h-auto border-red  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg"> Book me</button>
+                                                        <button className="h-auto p-1 bg-blue-700 rounded-lg border-red hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"> Book me</button>
                                                     </div>
                                                 </div>
                                             </a>
@@ -212,26 +243,26 @@ export default function booking_confirmation() {
 
                                                         <div class="text-center">
 
-                                                            <button className="p-1 h-auto border-red  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg"> Book me</button>
+                                                            <button className="h-auto p-1 bg-blue-700 rounded-lg border-red hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"> Book me</button>
                                                         </div>
 
                                                     </div>
                                                 </a>
                                                 {/* =====================<Room type-------------> */}
 
-                                                <div className='flex text-gray-600 text-sm font-medium mt-5 mb-15'>
-                                                    <div className='text-gray-600 flex-row pr-6 pl-7 text-sm font-medium'>
+                                                <div className='flex mt-5 text-sm font-medium text-gray-600 mb-15'>
+                                                    <div className='flex-row pr-6 text-sm font-medium text-gray-600 pl-7'>
                                                         <span className='font-bold'>Refundable: <p className='font-bold'>Free Cancellation</p></span>
                                                         {/* <span>Refundable: <p className='font-bold'>Free Cancellation</p></span>
                                                             <span>Refundable: <p className='font-bold'>Free Cancellation</p></span> */}
                                                     </div>
-                                                    <div className=' flex-row pr-6 text-gray-600 text-sm font-medium'>
-                                                        <p className='font-bold text-sm'>PKR 78661</p>
-                                                        <p className='font-medium text-sm'>1 Room - 3 Night</p>
+                                                    <div className='flex-row pr-6 text-sm font-medium text-gray-600 '>
+                                                        <p className='text-sm font-bold'>PKR 78661</p>
+                                                        <p className='text-sm font-medium'>1 Room - 3 Night</p>
 
                                                     </div>
                                                     <div className='flex-row pr-6'>
-                                                        <p className='font-bold text-sm pl-3'>Select Room</p>
+                                                        <p className='pl-3 text-sm font-bold'>Select Room</p>
                                                         <select name="dropdown" className=" font-medium shadow appearance-none border test-sm rounded-2xl  py-2 px-3 w-[8] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Room" >
                                                             <option defaultValue="rooms" >Rooms</option>
                                                             <option value="1">1 (PKR23456)</option>
@@ -270,26 +301,26 @@ export default function booking_confirmation() {
 
                                                         <div class="text-center">
 
-                                                            <button className="p-1 h-auto border-red  bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300  rounded-lg"> Book me</button>
+                                                            <button className="h-auto p-1 bg-blue-700 rounded-lg border-red hover:bg-blue-800 focus:ring-4 focus:ring-blue-300"> Book me</button>
                                                         </div>
 
                                                     </div>
                                                 </a>
                                                 {/* =====================<Room type-------------> */}
 
-                                                <div className='flex text-gray-600 text-sm font-medium mt-5 mb-15'>
-                                                    <div className='text-gray-600 flex-row pr-6 pl-7 text-sm font-medium'>
+                                                <div className='flex mt-5 text-sm font-medium text-gray-600 mb-15'>
+                                                    <div className='flex-row pr-6 text-sm font-medium text-gray-600 pl-7'>
                                                         <span className='font-bold'>Refundable: <p className='font-bold'>Free Cancellation</p></span>
                                                         {/* <span>Refundable: <p className='font-bold'>Free Cancellation</p></span>
                                                             <span>Refundable: <p className='font-bold'>Free Cancellation</p></span> */}
                                                     </div>
-                                                    <div className=' flex-row pr-6 text-gray-600 text-sm font-medium'>
-                                                        <p className='font-bold text-sm'>PKR 78661</p>
-                                                        <p className='font-medium text-sm'>1 Room - 3 Night</p>
+                                                    <div className='flex-row pr-6 text-sm font-medium text-gray-600 '>
+                                                        <p className='text-sm font-bold'>PKR 78661</p>
+                                                        <p className='text-sm font-medium'>1 Room - 3 Night</p>
 
                                                     </div>
                                                     <div className='flex-row pr-6'>
-                                                        <p className='font-bold text-sm pl-3'>Select Room</p>
+                                                        <p className='pl-3 text-sm font-bold'>Select Room</p>
                                                         <select name="dropdown" className=" font-medium shadow appearance-none border test-sm rounded-2xl  py-2 px-3 w-[8] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Room" >
                                                             <option defaultValue="rooms" >Rooms</option>
                                                             <option value="1">1 (PKR23456)</option>
