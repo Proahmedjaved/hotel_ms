@@ -80,7 +80,7 @@ export default function booking_confirmation() {
 
                 {/* < filter bar>*/}
 
-                <div class="flex flex-col md:flex-row h-screen w-screen">
+                <div class="flex flex-col md:flex-row h-screen w-screen -ml-8 ">
                     <div class="basis-[100%] md:basis-[25%]  h-[100vh] flex justify-center items-center">
                         <div className='bg-white h-[70%] w-60 ml-1 rounded-3xl abolute  flex flex-wrap '>
 
@@ -153,9 +153,9 @@ export default function booking_confirmation() {
 
                     {/* <hotels list bar>  */}
 
-                    <div class="basis-[100%] md:basis-[80%]  h-[100vh] flex justify-center items-center pb-20 ">
+                    <div class="basis-[100%] md:basis-[80%]  h-[100vh] flex justify-center items-center pb-20 ml-10">
 
-                        <div className='bg-white h-[100%] w-[104%]  rounded-3xl abolute  flex flex-wrap mt-20 -ml-20 scroll-smooth md:scroll-auto overflow-auto touch-auto'>
+                        <div className='bg-white h-[100%] w-[108%]  rounded-3xl abolute  flex flex-wrap mt-20 -ml-20 scroll-smooth md:scroll-auto overflow-auto touch-auto'>
                             <div>
                                 <div className="flex">
                                     <div className={` ${open ? "w-98" : "w-0 "
@@ -217,37 +217,37 @@ export default function booking_confirmation() {
 
                                                     </div>
                                                 </a>
-                                                    {/* =====================<Room type-------------> */}
+                                                {/* =====================<Room type-------------> */}
 
-                                                    <div className='flex text-gray-600 text-sm font-medium mt-5 mb-15'>
-                                                        <div className='text-gray-600 flex-row pr-6 pl-7 text-sm font-medium'>
-                                                            <span className='font-bold'>Refundable: <p className='font-bold'>Free Cancellation</p></span>
-                                                            {/* <span>Refundable: <p className='font-bold'>Free Cancellation</p></span>
+                                                <div className='flex text-gray-600 text-sm font-medium mt-5 mb-15'>
+                                                    <div className='text-gray-600 flex-row pr-6 pl-7 text-sm font-medium'>
+                                                        <span className='font-bold'>Refundable: <p className='font-bold'>Free Cancellation</p></span>
+                                                        {/* <span>Refundable: <p className='font-bold'>Free Cancellation</p></span>
                                                             <span>Refundable: <p className='font-bold'>Free Cancellation</p></span> */}
-                                                        </div>
-                                                        <div className=' flex-row pr-6 text-gray-600 text-sm font-medium'>
-                                                            <p className='font-bold text-sm'>PKR 78661</p>
-                                                            <p className='font-medium text-sm'>1 Room - 3 Night</p>
-
-                                                        </div>
-                                                        <div className='flex-row pr-6'>
-                                                            <p className='font-bold text-sm pl-3'>Select Room</p>
-                                                            <select name="dropdown" className=" font-medium shadow appearance-none border test-sm rounded-2xl  py-2 px-3 w-[8] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Room" >
-                                                                <option defaultValue="rooms" >Rooms</option>
-                                                                <option value="1">1 (PKR23456)</option>
-                                                                <option value="2">2 (PKR23456)</option>
-                                                                <option value="3">3 (PKR23456)</option>
-                                                                <option value="4">4 (PKR23456)</option>
-                                                                <option value="5">5 (PKR23456)</option>
-                                                                <option value="6">6 (PKR23456)</option>
-                                                                <option value="7">7 (PKR23456)</option>
-                                                                
-                                                            </select>
-
-                                                        </div>
                                                     </div>
+                                                    <div className=' flex-row pr-6 text-gray-600 text-sm font-medium'>
+                                                        <p className='font-bold text-sm'>PKR 78661</p>
+                                                        <p className='font-medium text-sm'>1 Room - 3 Night</p>
 
-                                                    
+                                                    </div>
+                                                    <div className='flex-row pr-6'>
+                                                        <p className='font-bold text-sm pl-3'>Select Room</p>
+                                                        <select name="dropdown" className=" font-medium shadow appearance-none border test-sm rounded-2xl  py-2 px-3 w-[8] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Room" >
+                                                            <option defaultValue="rooms" >Rooms</option>
+                                                            <option value="1">1 (PKR23456)</option>
+                                                            <option value="2">2 (PKR23456)</option>
+                                                            <option value="3">3 (PKR23456)</option>
+                                                            <option value="4">4 (PKR23456)</option>
+                                                            <option value="5">5 (PKR23456)</option>
+                                                            <option value="6">6 (PKR23456)</option>
+                                                            <option value="7">7 (PKR23456)</option>
+
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+
+
 
 
 
@@ -275,37 +275,37 @@ export default function booking_confirmation() {
 
                                                     </div>
                                                 </a>
-                                                    {/* =====================<Room type-------------> */}
+                                                {/* =====================<Room type-------------> */}
 
-                                                    <div className='flex text-gray-600 text-sm font-medium mt-5 mb-15'>
-                                                        <div className='text-gray-600 flex-row pr-6 pl-7 text-sm font-medium'>
-                                                            <span className='font-bold'>Refundable: <p className='font-bold'>Free Cancellation</p></span>
-                                                            {/* <span>Refundable: <p className='font-bold'>Free Cancellation</p></span>
+                                                <div className='flex text-gray-600 text-sm font-medium mt-5 mb-15'>
+                                                    <div className='text-gray-600 flex-row pr-6 pl-7 text-sm font-medium'>
+                                                        <span className='font-bold'>Refundable: <p className='font-bold'>Free Cancellation</p></span>
+                                                        {/* <span>Refundable: <p className='font-bold'>Free Cancellation</p></span>
                                                             <span>Refundable: <p className='font-bold'>Free Cancellation</p></span> */}
-                                                        </div>
-                                                        <div className=' flex-row pr-6 text-gray-600 text-sm font-medium'>
-                                                            <p className='font-bold text-sm'>PKR 78661</p>
-                                                            <p className='font-medium text-sm'>1 Room - 3 Night</p>
-
-                                                        </div>
-                                                        <div className='flex-row pr-6'>
-                                                            <p className='font-bold text-sm pl-3'>Select Room</p>
-                                                            <select name="dropdown" className=" font-medium shadow appearance-none border test-sm rounded-2xl  py-2 px-3 w-[8] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Room" >
-                                                                <option defaultValue="rooms" >Rooms</option>
-                                                                <option value="1">1 (PKR23456)</option>
-                                                                <option value="2">2 (PKR23456)</option>
-                                                                <option value="3">3 (PKR23456)</option>
-                                                                <option value="4">4 (PKR23456)</option>
-                                                                <option value="5">5 (PKR23456)</option>
-                                                                <option value="6">6 (PKR23456)</option>
-                                                                <option value="7">7 (PKR23456)</option>
-                                                                
-                                                            </select>
-
-                                                        </div>
                                                     </div>
+                                                    <div className=' flex-row pr-6 text-gray-600 text-sm font-medium'>
+                                                        <p className='font-bold text-sm'>PKR 78661</p>
+                                                        <p className='font-medium text-sm'>1 Room - 3 Night</p>
 
-                                                    
+                                                    </div>
+                                                    <div className='flex-row pr-6'>
+                                                        <p className='font-bold text-sm pl-3'>Select Room</p>
+                                                        <select name="dropdown" className=" font-medium shadow appearance-none border test-sm rounded-2xl  py-2 px-3 w-[8] text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="Room" >
+                                                            <option defaultValue="rooms" >Rooms</option>
+                                                            <option value="1">1 (PKR23456)</option>
+                                                            <option value="2">2 (PKR23456)</option>
+                                                            <option value="3">3 (PKR23456)</option>
+                                                            <option value="4">4 (PKR23456)</option>
+                                                            <option value="5">5 (PKR23456)</option>
+                                                            <option value="6">6 (PKR23456)</option>
+                                                            <option value="7">7 (PKR23456)</option>
+
+                                                        </select>
+
+                                                    </div>
+                                                </div>
+
+
 
 
 
