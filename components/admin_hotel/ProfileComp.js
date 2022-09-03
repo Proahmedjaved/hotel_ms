@@ -1,10 +1,35 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+
 
 export default function ProfileComp() {
+  
+
+  const [characters, setCharacters] = useState([])
+
+  const URL = "http://127.0.0.1:8000/";
+
+  // useEffect(() => {
+  //   fetch(URL + "hotelprofile/").then(response => response.json().then(data => {
+  //     setCharacters(data.results)
+  //   }))
+  // }, []
+  // );
+
+  useEffect(() => {
+    fetch(URL + "portal/hotelprofile/").then(response => response.json().then(data => {
+      // setCharacters(data.results)
+      console.log(data);
+    }))
+  }, []
+  );
+
+
+
   return (
+
     <div className='container p-20 mb-10 bg-gray-900 w-[70%] pt-30 justify-items-center rounded-2xl'>
 
-      <form>
+      <form action='' method=''>
       <label for="email" class="block mb-10 text-3xl font-medium  text-gray-100 dark:text-gray-300">Hotel Profile</label>
       <div class="grid md:grid-cols-2 md:gap-6">
           <div class="relative z-0 mb-6 w-full group">
